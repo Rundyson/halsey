@@ -1,0 +1,157 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * Theme: "PEAK" — cozy-adventure portfolio.
+ * Palette: peak-teal #2EC4B6, peak-slate #6C7A9C, peak-ocean #1D4E89,
+ *          peak-navy #0B1D33, peak-mist #E6F7F5.
+ * Fonts:   Darumadrop One (display), Nunito (body) — loaded via <link>
+ *          in src/routes/__root.tsx.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* PEAK palette (custom) */
+  --color-peak-teal: #2ec4b6;
+  --color-peak-teal-soft: #7fe0d8;
+  --color-peak-slate: #6c7a9c;
+  --color-peak-ocean: #1d4e89;
+  --color-peak-navy: #0b1d33;
+  --color-peak-mist: #e6f7f5;
+  --color-peak-gold: #e8b84a;
+
+  /* Fonts */
+  --font-display: "Darumadrop One", "Nunito", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.985 0.008 190);
+  --foreground: oklch(0.228 0.049 254.6);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.228 0.049 254.6);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.228 0.049 254.6);
+  --primary: oklch(0.742 0.121 185.4);
+  --primary-foreground: oklch(0.228 0.049 254.6);
+  --secondary: oklch(0.963 0.018 188.4);
+  --secondary-foreground: oklch(0.228 0.049 254.6);
+  --muted: oklch(0.955 0.012 190);
+  --muted-foreground: oklch(0.5 0.05 260);
+  --accent: oklch(0.963 0.018 188.4);
+  --accent-foreground: oklch(0.228 0.049 254.6);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.008 190);
+  --border: oklch(0.9 0.02 200);
+  --input: oklch(0.9 0.02 200);
+  --ring: oklch(0.742 0.121 185.4);
+}
+
+.dark {
+  --background: oklch(0.228 0.049 254.6);
+  --foreground: oklch(0.963 0.018 188.4);
+  --card: oklch(0.3 0.05 255);
+  --card-foreground: oklch(0.963 0.018 188.4);
+  --popover: oklch(0.3 0.05 255);
+  --popover-foreground: oklch(0.963 0.018 188.4);
+  --primary: oklch(0.742 0.121 185.4);
+  --primary-foreground: oklch(0.228 0.049 254.6);
+  --secondary: oklch(0.35 0.05 255);
+  --secondary-foreground: oklch(0.963 0.018 188.4);
+  --muted: oklch(0.35 0.05 255);
+  --muted-foreground: oklch(0.7 0.04 255);
+  --accent: oklch(0.35 0.05 255);
+  --accent-foreground: oklch(0.963 0.018 188.4);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.963 0.018 188.4);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.742 0.121 185.4);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Anchor targets clear the sticky navbar */
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Scroll-reveal animation: elements start hidden and slide up into place.
+   Applied by <Reveal /> in src/components/reveal.tsx. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
