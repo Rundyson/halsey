@@ -19,6 +19,7 @@ import aprojectImg3 from "@/assets/1_2.jpg";
 // ---- 2nd Year images ----
 import bprojectImg1 from "@/assets/2_1.jpg";
 import bprojectImg2 from "@/assets/2_2.jpg";
+import bprojectImg3 from "@/assets/2_4.png";
 
 // ---- 3rd Year images (TODO: rename to match your real files) ----
 import cprojectImg1 from "@/assets/3_3.jpg";
@@ -33,10 +34,20 @@ import dprojectImg3 from "@/assets/4_3.jpg";
 
 // ---- PDF files ----
 import year2Pdf from "@/assets/2_3.pdf";
+import year22Pdf from "@/assets/Herald.pdf";
 import year3Pdf from "@/assets/3_2.pdf";
+import year33Pdf from "@/assets/WC.pdf";
+import year333Pdf from "@/assets/WT.pdf";
 
 // ---- OJT images ----
-import ojtImg1 from "@/assets/o1.png";
+import ojtImg1 from "@/assets/0j1.jpg";
+import ojtImg2 from "@/assets/0j2.jpg";
+import ojtImg3 from "@/assets/0j3.jpg";
+import ojtImg4 from "@/assets/0j4.jpg";
+
+import ojtImg11 from "@/assets/oj1.jpg";
+import ojtImg22 from "@/assets/oj2.jpg";
+import ojtImg33 from "@/assets/oj3.jpg";
 
 // ---- Certificate / award images ----
 import certImg1 from "@/assets/c3.png"; 
@@ -146,6 +157,39 @@ export const projects: Project[] = [
       "Contributed as one of the hosts for the Collegiate Sportsfest in San Pablo Colleges",
     image: bprojectImg2,
   },
+
+    {
+    id: "y2-communications-committee",
+    year: 2,
+    title: "COMMUNICATIONS COMMITTEE",
+    description:
+      "MASKOM Productions, became the coordinator for sponsors and key figures of San Pablo Colleges.",
+    image: cprojectImg2,
+  },
+      {
+    id: "y2-kwentong-barkada-host",
+    year: 2,
+    title: "HOST | KWENTONG BARKADA: CAS GENERAL ASSEMBLY",
+    description:
+      "Appointed as one of the hosts for a General Assembly activity of the College of Arts and Sciences in San Pablo Colleges.",
+    image: dprojectImg1,
+  },
+    {
+    id: "y2-hotspot-host",
+    year: 2,
+    title: "HOST | The HotSpot: Pause or Play",
+    description:
+      "Became one of the hosts for the podcast the HotSpot when I was in my Second year in San Pablo Colleges.",
+    image: dprojectImg2,
+  },
+    {
+    id: "y2-feature-writer",
+    year: 2,
+    title: "FEATURE WRITER | ACTA DIURNA",
+    description:
+      "Became one of the feature writers for the Acta Diurna, a student-led publication in San Pablo Colleges.",
+    image: bprojectImg3,
+  },
   // ---- 2nd Year PDF (2_3.pdf) ----
   {
     id: "y2-document",
@@ -155,6 +199,15 @@ export const projects: Project[] = [
     description:
       "Scriptwriter and researcher. Open the PDF to read the full script and research document.",
     file: year2Pdf,
+  },
+  {
+    id: "y2-document2",
+    year: 2,
+    type: "document",
+    title: "WRITER & RESEARCHER | Wednesday Herald",
+    description:
+      "Scriptwriter and researcher. Open the PDF to read the full script and research document.",
+    file: year22Pdf,
   },
 
   // ---- 3rd Year ----
@@ -166,14 +219,7 @@ export const projects: Project[] = [
       "Appointed as the Lady of Ceremony for an event at the Dreams, a San Pablo Colleges Pre-School parent-student seminar.",
     image: cprojectImg1,
   },
-  {
-    id: "y3-communications-committee",
-    year: 3,
-    title: "COMMUNICATIONS COMMITTEE",
-    description:
-      "MASKOM Productions, became the coordinator for sponsors and key figures of San Pablo Colleges.",
-    image: cprojectImg2,
-  },
+
   {
     id: "y3-sonder-film",
     year: 3,
@@ -190,6 +236,15 @@ export const projects: Project[] = [
       "Colorgraded the Poster for “Tatay Banong” created by a student-led production, Sonder Film Productions.",
     image: cprojectImg4,
   },
+  
+  {
+    id: "y3-miting-de-atras-abante",
+    year: 3,
+    title: "VO | MITING DE ATRAS ABANTE | MASKOM THEATER PLAY",
+    description:
+      "Became the speaker for the first ever theater play of the MASKOM Society, Miting de Atras Abante.",
+    image: dprojectImg3,
+  },
   // ---- 3rd Year PDF (3_2.pdf) ----
   {
     id: "y3-document",
@@ -200,32 +255,29 @@ export const projects: Project[] = [
       "“Tatay Banong” a student-led documentary film production.",
     file: year3Pdf,
   },
+    {
+    id: "y3-document2",
+    year: 3,
+    type: "document",
+    title: "WRITER | Creative Writing Course Requirement",
+    description:
+      "Scriptwriter and researcher. Open the PDF to read the full script and research document.",
+    file: year33Pdf,
+  },
+  {
+    id: "y3-document3",
+    year: 3,
+    type: "document",
+    title: "WRITER | Travelogue Creative Writing Course Requirement",
+    description:
+      "Scriptwriter and researcher. Open the PDF to read the full script and research document.",
+    file: year333Pdf,
+  },
+
 
   // ---- 4th Year ----
-  {
-    id: "y4-kwentong-barkada-host",
-    year: 4,
-    title: "HOST | KWENTONG BARKADA: CAS GENERAL ASSEMBLY",
-    description:
-      "Appointed as one of the hosts for a General Assembly activity of the College of Arts and Sciences in San Pablo Colleges.",
-    image: dprojectImg1,
-  },
-  {
-    id: "y4-hotspot-host",
-    year: 4,
-    title: "HOST | The HotSpot: Pause or Play",
-    description:
-      "Became one of the hosts for the podcast the HotSpot when I was in my Second year in San Pablo Colleges.",
-    image: dprojectImg2,
-  },
-  {
-    id: "y4-miting-de-atras-abante",
-    year: 4,
-    title: "VO | MITING DE ATRAS ABANTE | MASKOM THEATER PLAY",
-    description:
-      "Became the speaker for the first ever theater play of the MASKOM Society, Miting de Atras Abante.",
-    image: dprojectImg3,
-  },
+
+
 ];
 
 export const projectYears = [
@@ -240,15 +292,26 @@ export const projectYears = [
 // ---------------------------------------------------------------------
 export const ojtEntries = [
   {
-    company: "Sonder Film Production ",
-    role: "COLORIST",
-    duration: "Jun 2025 — Aug 2025 · 240 hrs",
-    location: "San Pablo City, Philippines",
+    company: "GOBOCREATIVES, INC.",
+    role: "COPYWRITER || JOURNALISM SETTING",
+    duration: "· 214 hrs",
+    location: "Makati, Philippines",
     responsibilities: [
-      "Color grading and correction for film projects, ensuring visual consistency and enhancing the overall aesthetic of the footage.",
+      "I was a copywriter for multiple well-known brands, I also helped out with brand shoots and social media contents",
     ],
-    photos: [ojtImg1],
+    photos: [ojtImg1, ojtImg2, ojtImg3, ojtImg4], // TODO: replace with your own photos
   },
+  {
+    company: "KNOWLEDGE CHANNEL FOUNDATION, INC.",
+    role: "PROJECT & EVENTS MANAGER || PUBLIC RELATIONS SETTING",
+    duration: "· 278 hrs",
+    location: "Pasig, Philippines",
+    responsibilities: [
+      "Under the Early Childhood Development Unit, I created the ECD Directory, Canvassed Suppliers for a Book Distribution Project, Helped out with events, and shoots",
+    ],
+    photos: [ojtImg11, ojtImg22, ojtImg33], // TODO: replace with your own photos
+  },
+
 ];
 
 // ---------------------------------------------------------------------
