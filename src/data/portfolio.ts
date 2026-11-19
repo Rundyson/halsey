@@ -272,6 +272,22 @@ export const projects: Project[] = [
       "Became the speaker for the first ever theater play of the MASKOM Society, Miting de Atras Abante.",
     image: dprojectImg3,
   },
+      {
+    id: "y3-director-host",
+    year: 3,
+    title: "DIRECTOR & HOST ",
+    description:
+      "KOMpods: Clicktomania | DWMC 107.3",
+    image: cprojectImg55,
+  },
+    {
+    id: "y3-host-creative-committee",
+    year: 3,
+    title: "HOST & CREATIVES COMMITEE ",
+    description:
+      "PasKOMorning ",
+    image: cprojectImg6,
+  },
     {
     id: "y3-news-reporter",
     year: 3,
@@ -299,22 +315,7 @@ export const projects: Project[] = [
     image: cprojectImg8,
     link: "https://www.facebook.com/reel/1351178303053323", // TODO: uncomment and paste your real link when ready
   },
-    {
-    id: "y3-director-host",
-    year: 3,
-    title: "DIRECTOR & HOST ",
-    description:
-      "KOMpods: Clicktomania | DWMC 107.3",
-    image: cprojectImg55,
-  },
-    {
-    id: "y3-host-creative-committee",
-    year: 3,
-    title: "HOST & CREATIVES COMMITEE ",
-    description:
-      "PasKOMorning ",
-    image: cprojectImg6,
-  },
+
   // ---- 3rd Year PDF (3_2.pdf) ----
   {
     id: "y3-document",
