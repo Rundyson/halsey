@@ -350,9 +350,9 @@ function OjtSection() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     {/* TODO: replace the initials badge with your company logo */}
-                    <span className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-peak-teal/15 font-display text-lg text-peak-ocean">
+                    {/* <span className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-peak-teal/15 font-display text-lg text-peak-ocean">
                       {entry.company.slice(0, 2).toUpperCase()}
-                    </span>
+                    </span> */}
                     <h3 className="font-display text-2xl text-peak-navy sm:text-3xl">{entry.company}</h3>
                     <p className="text-lg font-extrabold text-peak-teal">{entry.role}</p>
                   </div>

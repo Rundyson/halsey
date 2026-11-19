@@ -13,19 +13,26 @@ import profileImg from "@/assets/profile.jpg";
 
 // ---- 1st Year images ----
 import aprojectImg1 from "@/assets/1_1.jpg";
-import aprojectImg2 from "@/assets/11.jpg";
+import aprojectImg2 from "@/assets/121.jpg";
 import aprojectImg3 from "@/assets/1_2.jpg";
+import aprojectImg4 from "@/assets/123.jpg";
 
 // ---- 2nd Year images ----
 import bprojectImg1 from "@/assets/2_1.jpg";
 import bprojectImg2 from "@/assets/2_2.jpg";
 import bprojectImg3 from "@/assets/2_4.png";
+import bprojectImg4 from "@/assets/212.jpeg";
 
 // ---- 3rd Year images (TODO: rename to match your real files) ----
 import cprojectImg1 from "@/assets/3_3.jpg";
+import cprojectImg5 from "@/assets/11.jpg";
 import cprojectImg2 from "@/assets/3_1.jpg";
 import cprojectImg3 from "@/assets/3_4.jpg";
 import cprojectImg4 from "@/assets/o1.png";
+import cprojectImg55 from "@/assets/124.png";
+import cprojectImg6 from "@/assets/125.jpg";
+import cprojectImg7 from "@/assets/323.png";
+import cprojectImg8 from "@/assets/313.png";
 
 // ---- 4th Year images (TODO: rename to match your real files) ----
 import dprojectImg1 from "@/assets/4_1.jpg";
@@ -38,6 +45,7 @@ import year22Pdf from "@/assets/Herald.pdf";
 import year3Pdf from "@/assets/3_2.pdf";
 import year33Pdf from "@/assets/WC.pdf";
 import year333Pdf from "@/assets/WT.pdf";
+import year3333Pdf from "@/assets/WWW.pdf";
 
 // ---- OJT images ----
 import ojtImg1 from "@/assets/0j1.jpg";
@@ -48,6 +56,7 @@ import ojtImg4 from "@/assets/0j4.jpg";
 import ojtImg11 from "@/assets/oj1.jpg";
 import ojtImg22 from "@/assets/oj2.jpg";
 import ojtImg33 from "@/assets/oj3.jpg";
+import ojtImg44 from "@/assets/ooo.jpg";
 
 // ---- Certificate / award images ----
 import certImg1 from "@/assets/c3.png"; 
@@ -111,6 +120,7 @@ export interface Project {
   description: string;
   image?: string; // used by normal projects
   file?: string;  // used by documents (PDF open link)
+  link?: string;  // optional external "open link" (video, article, etc.)
 }
 
 export const projects: Project[] = [
@@ -124,13 +134,22 @@ export const projects: Project[] = [
     image: aprojectImg1,
   },
   {
-    id: "y1-news-reporter",
+    id: "y1-host-creatives-committee",
     year: 1,
-    title: "NEWS REPORTER | TV95",
+    title: "HOST & CREATIVES COMMITTEE",
     description:
-      "Covered the continuous earthquake happenings along with Post-During-After Earthquake things that you should do.",
+      "San Pablo Colleges FRESHMEN DAY",
     image: aprojectImg2,
   },
+  {
+    id: "y1-logistics-head-v-o",
+    year: 1,
+    title: "LOGISTICS HEAD & V.O",
+    description:
+      "Pinilikula: MASKOM Fundraiser for their Upcoming Feature Film",
+    image: aprojectImg4,
+  },
+
   {
     id: "y1-maskom-christmas-host",
     year: 1,
@@ -148,6 +167,14 @@ export const projects: Project[] = [
     description:
       "Managed the overall stage design of the San Pablo Colleges Ravens’ Victory Party.",
     image: bprojectImg1,
+  },
+  {
+    id: "y2-writer-researcher",
+    year: 2,
+    title: "WRITER & RESEARCHER",
+    description:
+      "BANTAY HALALAN LAGUNA 2025 Coverage Externship",
+    image: bprojectImg4,
   },
   {
     id: "y2-sportfest-host",
@@ -245,6 +272,49 @@ export const projects: Project[] = [
       "Became the speaker for the first ever theater play of the MASKOM Society, Miting de Atras Abante.",
     image: dprojectImg3,
   },
+    {
+    id: "y3-news-reporter",
+    year: 3,
+    title: "NEWS REPORTER | TV95",
+    description:
+      "Covered the continuous earthquake happenings along with Post-During-After Earthquake things that you should do.",
+    image: cprojectImg5,
+    link: "https://www.facebook.com/reel/822970080309460", // TODO: uncomment and paste your real link when ready
+  },
+    {
+    id: "y3-camera-operator",
+    year: 3,
+    title: "CAMERA OPERATOR | MASKOM INSIDER",
+    description:
+      "Lifestyle Content Creator for the MASKOM Society, I was the camera operator for the MASKOM Insider.",
+    image: cprojectImg7,
+    link: "https://www.facebook.com/reel/24808118745463783", // TODO: uncomment and paste your real link when ready
+  },
+    {
+    id: "y3-camera-operator",
+    year: 3,
+    title: "DIRECTOR & SEGMENT PRODUCER | MASKOM Insider",
+    description:
+      "Lifestyle Content Creator for the MASKOM Society, I was the director and segment producer for the MASKOM Insider.",
+    image: cprojectImg8,
+    link: "https://www.facebook.com/reel/1351178303053323", // TODO: uncomment and paste your real link when ready
+  },
+    {
+    id: "y3-director-host",
+    year: 3,
+    title: "DIRECTOR & HOST ",
+    description:
+      "KOMpods: Clicktomania | DWMC 107.3",
+    image: cprojectImg55,
+  },
+    {
+    id: "y3-host-creative-committee",
+    year: 3,
+    title: "HOST & CREATIVES COMMITEE ",
+    description:
+      "PasKOMorning ",
+    image: cprojectImg6,
+  },
   // ---- 3rd Year PDF (3_2.pdf) ----
   {
     id: "y3-document",
@@ -272,6 +342,15 @@ export const projects: Project[] = [
     description:
       "Scriptwriter and researcher. Open the PDF to read the full script and research document.",
     file: year333Pdf,
+  },
+  {
+    id: "y3-document4",
+    year: 3,
+    type: "document",
+    title: "WRITER | Sa Anino ng Liwanag",
+    description:
+      "Scriptwriter and researcher. Open the PDF to read the full script and research document.",
+    file: year3333Pdf,
   },
 
 
@@ -309,7 +388,7 @@ export const ojtEntries = [
     responsibilities: [
       "Under the Early Childhood Development Unit, I created the ECD Directory, Canvassed Suppliers for a Book Distribution Project, Helped out with events, and shoots",
     ],
-    photos: [ojtImg11, ojtImg22, ojtImg33], // TODO: replace with your own photos
+    photos: [ojtImg11, ojtImg22, ojtImg33, ojtImg44], // TODO: replace with your own photos
   },
 
 ];

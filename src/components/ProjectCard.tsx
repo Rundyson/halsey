@@ -4,6 +4,7 @@ import type { Project } from "@/data/portfolio";
 /**
  * Two layouts in one component:
  *  - normal project  -> full-image card with text layered over a dark gradient
+ *                       (shows an "Open link" button when `project.link` is set)
  *  - document (PDF)  -> full-width card with title, description and an "Open PDF" button
  */
 export function ProjectCard({ project }: { project: Project }) {
@@ -68,6 +69,18 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="mt-1.5 line-clamp-5 text-sm leading-relaxed text-white/80">
           {project.description}
         </p>
+
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-peak-teal px-5 py-2.5 text-sm font-semibold text-peak-navy transition hover:opacity-90"
+          >
+            Open link
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        )}
       </div>
     </article>
   );
