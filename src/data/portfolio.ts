@@ -255,14 +255,7 @@ export const projects: Project[] = [
       "Sonder Film Productions A student-led documentary film production that we formed for our introduction to film course..",
     image: cprojectImg3,
   },
-  {
-    id: "y3-sonder-film-colorist",
-    year: 3,
-    title: "COLORIST | Sonder Film Production “TATAY BANONG”",
-    description:
-      "Colorgraded the Poster for “Tatay Banong” created by a student-led production, Sonder Film Productions.",
-    image: cprojectImg4,
-  },
+ 
   
   {
     id: "y3-miting-de-atras-abante",
@@ -287,6 +280,15 @@ export const projects: Project[] = [
     description:
       "PasKOMorning ",
     image: cprojectImg6,
+  },
+   {
+    id: "y3-sonder-film-colorist",
+    year: 3,
+    title: "COLORIST | Sonder Film Production “TATAY BANONG”",
+    description:
+      "Colorgraded the Poster for “Tatay Banong” created by a student-led production, Sonder Film Productions.",
+    image: cprojectImg4,
+    link: "https://drive.google.com/file/d/1xZ0tsmQMAfJYMi3pfm-GhoTI5AYoMXhY/view?usp=sharing", // TODO: uncomment and paste your real link when ready
   },
     {
     id: "y3-news-reporter",
